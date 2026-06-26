@@ -4430,6 +4430,9 @@ which explains these defenses in significant detail.
     <Detector class="com.h3xstream.findsecbugs.xml.XmlDecoderDetector">
         <Details>Identify use of XMLDecoder (a dangerous XML serializer).</Details>
     </Detector>
+    <Detector class="com.h3xstream.findsecbugs.MyXmlDecoderDetector">
+        <Details>Identify use of XMLDecoder (a dangerous XML serializer). [my training copy]</Details>
+    </Detector>
     <BugPattern type="XML_DECODER">
         <ShortDescription>XMLDecoder usage</ShortDescription>
         <LongDescription>It is not safe to use an XMLDecoder to parse user supplied data</LongDescription>
@@ -4479,6 +4482,18 @@ The solution is to avoid using XMLDecoder to parse content from an untrusted sou
 <a href="https://cwe.mitre.org/data/definitions/502.html">CWE-502: Deserialization of Untrusted Data</a>
 </p>
             ]]>
+        </Details>
+    </BugPattern>
+    <BugPattern type="MY_XML_DECODER">
+        <ShortDescription>XMLDecoder usage (my training copy)</ShortDescription>
+        <LongDescription>It is not safe to use an XMLDecoder to parse user supplied data</LongDescription>
+        <Details>
+            <![CDATA[
+<p>
+XMLDecoder should not be used to parse untrusted data. Deserializing user input can lead to
+arbitrary code execution, because XMLDecoder supports arbitrary method invocation.
+</p>
+        ]]>
         </Details>
     </BugPattern>
     <BugCode abbrev="XMLDEC">XMLDecoder usage</BugCode>

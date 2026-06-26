@@ -78,6 +78,7 @@
     <Detector class="com.h3xstream.findsecbugs.jsp.XslTransformJspDetector" reports="JSP_XSLT" />
     <Detector class="com.h3xstream.findsecbugs.xml.StdXmlTransformDetector" reports="MALICIOUS_XSLT" />
     <Detector class="com.h3xstream.findsecbugs.xml.XmlDecoderDetector" reports="XML_DECODER"/>
+    <Detector class="com.h3xstream.findsecbugs.MyXmlDecoderDetector" reports="MY_XML_DECODER"/>
     <Detector class="com.h3xstream.findsecbugs.crypto.StaticIvDetector" reports="STATIC_IV"/>
     <Detector class="com.h3xstream.findsecbugs.crypto.CipherWithNoIntegrityDetector" reports="ECB_MODE,PADDING_ORACLE,CIPHER_INTEGRITY"/>
     <Detector class="com.h3xstream.findsecbugs.crypto.EsapiEncryptorDetector" reports="ESAPI_ENCRYPTOR"/>
@@ -246,6 +247,7 @@
     <BugPattern type="MALICIOUS_XSLT" abbrev="SECXSLT" category="SECURITY" cweid="94"/>
     <BugPattern type="XSS_SERVLET" abbrev="SECXSS2" category="SECURITY" cweid="79"/>
     <BugPattern type="XML_DECODER" abbrev="XMLDEC" category="SECURITY" cweid="502"/>
+    <BugPattern type="MY_XML_DECODER" abbrev="MYXMLDEC" category="SECURITY" cweid="502"/>
     <BugPattern type="STATIC_IV" abbrev="STAIV" category="SECURITY" cweid="329"/>
     <BugPattern type="ECB_MODE" abbrev="SECECB" category="SECURITY" cweid="327"/>
     <BugPattern type="PADDING_ORACLE" abbrev="PADORA" category="SECURITY" cweid="326"/>
